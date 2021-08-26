@@ -1,21 +1,19 @@
+/* eslint-disable react/jsx-filename-extension */
 import React from 'react';
 import ReactDOM from 'react-dom';
-import 'mdb-react-ui-kit/dist/css/mdb.min.css'
+import 'mdb-react-ui-kit/dist/css/mdb.min.css';
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
 import {
   ApolloClient,
   InMemoryCache,
   ApolloProvider,
-  useQuery,
-  gql
-} from "@apollo/client";
-
+} from '@apollo/client';
+import App from './App';
+import reportWebVitals from './reportWebVitals';
 
 const client = new ApolloClient({
   uri: 'https://ancient-cove-23601.herokuapp.com/graphql',
-  cache: new InMemoryCache()
+  cache: new InMemoryCache(),
 });
 
 ReactDOM.render(
@@ -23,7 +21,7 @@ ReactDOM.render(
 
     <App />
   </ApolloProvider>,
-  document.getElementById('root')
+  document.getElementById('root'),
 );
 
 // If you want to start measuring performance in your app, pass a function

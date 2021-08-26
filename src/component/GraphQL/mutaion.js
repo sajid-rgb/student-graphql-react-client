@@ -1,4 +1,4 @@
-import {gql} from '@apollo/client'
+import { gql } from '@apollo/client';
 
 export const CREATE_USER = gql`
 mutation createUser($name:String,$email:String,$date:String,$phone:String,$subject:[String]){
@@ -12,7 +12,7 @@ mutation createUser($name:String,$email:String,$date:String,$phone:String,$subje
     }
 }
 
-`
+`;
 export const UPDATE_USER = gql`
   mutation updatedUser($id:String,$name:String,$email:String,$date:String,$phone:String,$subject:[String]) {
     updatedUser(id: $id,users:{name:$name,email:$email,date:$date,phone:$phone,subject:$subject}){

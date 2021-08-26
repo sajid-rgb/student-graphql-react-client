@@ -1,4 +1,5 @@
-import { gql } from "@apollo/client";
+/* eslint-disable import/prefer-default-export */
+import { gql } from '@apollo/client';
 
 export const getAll = gql`
 {
@@ -11,4 +12,4 @@ export const getAll = gql`
     subject
   }
 }
-`
+`;
