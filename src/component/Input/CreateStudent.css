@@ -1,0 +1,16 @@
+.input{
+    height: 40px;
+    width: 80%;
+    border-radius: 2px;
+    background-color:transparent;
+    border:2px solid white;
+    margin-top: 5px;
+    color:white;
+}
+.submit-button {
+    height:40px;
+    width: 20%;
+    background-color: green;
+    color: white;
+    border-radius: 10px;
+}
