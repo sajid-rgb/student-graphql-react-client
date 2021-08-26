@@ -31,28 +31,8 @@ const Input = () => {
 
     const onRemove = (removedItem) => {
         setSelectedValue(removedItem)
-        const newUsers = { ...users }
-        newUsers.subject = removedItem
-        setUsers(newUsers);
+        handleRefactor(removedItem,"subject")
     }
-
-
-   const handleRefactor=(value,name)=>{
-    const newUsers = { ...users }
-    newUsers[name] = value
-    setUsers(newUsers);
-
-   }
-
-   const handleError=(error)=>{
-
-    setErrorMessage(error)
-
-
-   }
-
-
-
     const handleChange = (e) => {
         if (e.target.name === 'email') {
             const re = /\S+@\S+\.\S+/;
@@ -107,6 +87,18 @@ const Input = () => {
             handleError("please fill all the field correctly")
         }
     }
+
+    const handleRefactor=(value,name)=>{
+        const newUsers = { ...users }
+        newUsers[name] = value
+        setUsers(newUsers);
+    
+       }
+    
+       const handleError=(error)=>{
+        setErrorMessage(error)
+     }
+
     return (
      <div>
         <div>

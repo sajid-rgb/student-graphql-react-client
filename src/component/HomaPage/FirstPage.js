@@ -8,7 +8,7 @@ import {
 import Aos from 'aos'
 import 'aos/dist/aos.css'
 import HomeImg from "../../images/home.png"
-import "./Barrier.css"
+import "./Firstpage.css"
 const Barrier = () => {
     const [isTheme, setIsTheme] = useState(false)
 

@@ -28,34 +28,16 @@ const UpdateStudent = () => {
     const [errorMessage, setErrorMessage] = useState("")
     const onSelect = (selectedItem) => {
         setSelectedValue(selectedItem)
-         handleRefactor(selectedItem,"subject")
+        handleRefactor(selectedItem,"subject")
         handleError("")
     }
 
 
     const onRemove = (removedItem) => {
         setSelectedValue(removedItem)
-        const newUsers = { ...users }
-        newUsers.subject = removedItem
-        setUsers(newUsers);
+        handleRefactor(removedItem,"subject")
+        
     }
-
-    const handleRefactor=(value,name)=>{
-        const newUsers = { ...users }
-        newUsers[name] = value
-        setUsers(newUsers);
-    
-       }
-    
-       const handleError=(error)=>{
-    
-        setErrorMessage(error)
-    
-    
-       }
-    
-    
-    
         const handleChange = (e) => {
             if (e.target.name === 'email') {
                 const re = /\S+@\S+\.\S+/;
@@ -107,8 +89,19 @@ const UpdateStudent = () => {
             handleError("")
     };
 
-
-
+    const handleRefactor=(value,name)=>{
+        const newUsers = { ...users }
+        newUsers[name] = value
+        setUsers(newUsers);
+    
+       }
+    
+       const handleError=(error)=>{
+    
+        setErrorMessage(error)
+    
+    
+       }
 
     return (
         <div className="row">
@@ -142,9 +135,9 @@ const UpdateStudent = () => {
                         </div>
                     </div>
                     <button className="submit-button" onClick={updateUser}>Update Now</button>
-                    {/* {
+                     {
                     errorMessage && <p className="text-danger">{errorMessage}</p>
-                } */}
+                } 
 
                 </div>
             </div>

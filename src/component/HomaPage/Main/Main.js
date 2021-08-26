@@ -1,5 +1,5 @@
 import React from "react"
-import Input from "../../Input/Input.js"
+import Input from "../../Input/CreateStudent.js"
 import Students from "../../Students/Students.js"
 import Sidebar from '../Sidebar/Sidebar.js'
 const Main =()=>{

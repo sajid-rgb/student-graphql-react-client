@@ -3,8 +3,6 @@ import React, { useContext, useEffect, useState } from 'react';
 import { getAll } from '../GraphQL/query';
 import { defaults, Pie } from 'react-chartjs-2';
 import { DELETE_USER, UPDATE_USER } from '../GraphQL/mutaion';
-import { stud, stud2, stud3, stud4, stud5 } from '../Constant/Constant';
-import { getAllData } from '../Constant/functions';
 import { Link } from 'react-router-dom';
 import { MainContext } from '../../App';
 import LoadingSpinner from '../LoadingSpinner/LoadingSpinner';

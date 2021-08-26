@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import Input from './component/Input/Input';
+import Input from './component/Input/CreateStudent';
 import { useQuery, gql, useMutation } from "@apollo/client"
 import { CREATE_USER } from './component/GraphQL/mutaion';
 import Students from './component/Students/Students';
@@ -11,7 +11,7 @@ import {
   Route,
   Link
 } from "react-router-dom";
-import Barrier from "./component/HomaPage/Barrrier.js"
+import Barrier from "./component/HomaPage/FirstPage.js"
 import Main from './component/HomaPage/Main/Main';
 import Subjects from './component/HomaPage/Subjects/Subjects';
 import UpdateStudent from './component/UpdateStudent/UpdateStudent';
